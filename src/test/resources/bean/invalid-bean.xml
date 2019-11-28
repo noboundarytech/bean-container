@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<container>
+    <beans>
+        <bean id="invalidBean" class="com.lpcoder.agile.invalid.invalidBean" isSingleton="false"/>
+    </beans>
+</container>

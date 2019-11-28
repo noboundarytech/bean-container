@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<container>
+    <auto-scans>
+        <scan package="tech.noboundary.bean.container"/>
+    </auto-scans>
+    <aspects>
+        <pointcut expression="* tech.noboundary.bean.container.service.placeOrder(..)">
+            <aspect order="1" ref="transactionAspect"/>
+        </pointcut>
+    </aspects>
+</container>

@@ -1,0 +1,24 @@
+container:
+    beans:
+        -
+            id: constructorBean
+            class: tech.noboundary.bean.container.component.ConstructorBean
+            constructor-arg:
+                -
+                    index: 0
+                    type: tech.noboundary.bean.container.dao.AccountDao
+                    ref: accountDao
+                -
+                    index: 1
+                    type: tech.noboundary.bean.container.dao.ItemDao
+                    ref: itemDao
+                -
+                    index: 2
+                    type: int
+                    value: 1
+        -
+            id: accountDao
+            class: tech.noboundary.bean.container.dao.AccountDao
+        -
+            id: itemDao
+            class: tech.noboundary.bean.container.dao.ItemDao

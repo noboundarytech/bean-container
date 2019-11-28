@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<container>
+    <auto-scans>
+        <scan package="tech.noboundary.bean.container.component" />
+        <scan package="tech.noboundary.bean.container.dao" />
+    </auto-scans>
+    <beans>
+        <bean id="customService"
+              class="tech.noboundary.bean.container.service.CustomService">
+            <property name="accountDao" ref="accountDao"/>
+            <property name="itemDao" ref="itemDao"/>
+            <property name="author" value="lingPai"/>
+        </bean>
+        <bean id="accountDao" class="tech.noboundary.bean.container.dao.AccountDao"/>
+        <bean id="itemDao" class="tech.noboundary.bean.container.dao.ItemDao"/>
+        <bean id="notSingletonBean"
+              class="tech.noboundary.bean.container.component.NotSingletonBean"
+              isSingleton="false"/>
+    </beans>
+</container>

@@ -1,0 +1,28 @@
+container:
+    auto-scans:
+        -
+            package: tech.noboundary.bean.container
+    beans:
+        -
+            id: customService
+            class: tech.noboundary.bean.container.service.CustomService
+            property:
+                -
+                    name: accountDao
+                    ref: accountDao
+                -
+                    name: itemDao
+                    ref: itemDao
+                -
+                    name: author
+                    value: lingPai
+        -
+            id: accountDao
+            class: tech.noboundary.bean.container.dao.AccountDao
+        -
+            id: itemDao
+            class: tech.noboundary.bean.container.dao.ItemDao
+        -
+            id: notSingletonBean
+            class: tech.noboundary.bean.container.component.NotSingletonBean
+            isSingleton: false

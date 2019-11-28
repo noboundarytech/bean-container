@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<container>
+    <beans>
+        <bean id="constructorBean"
+              class="tech.noboundary.bean.container.component.ConstructorBean">
+            <constructor-arg index="0" type="tech.noboundary.bean.container.dao.AccountDao"
+                             ref="accountDao"/>
+            <constructor-arg index="1" type="tech.noboundary.bean.container.dao.ItemDao"
+                             ref="itemDao"/>
+            <constructor-arg index="2" type="int" value="1"/>
+        </bean>
+        <bean id="accountDao" class="tech.noboundary.bean.container.dao.AccountDao"/>
+        <bean id="itemDao" class="tech.noboundary.bean.container.dao.ItemDao"/>
+    </beans>
+</container>

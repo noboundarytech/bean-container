@@ -1,0 +1,4 @@
+container:
+    auto-scans:
+        -
+            package: tech.noboundary.bean.container
